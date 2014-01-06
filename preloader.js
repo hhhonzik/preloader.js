@@ -1,5 +1,5 @@
 /*!
- * Copyright 2013 Jan Stepanovsky
+ * Copyright 2014 Jan Stepanovsky
  */
 
 (function($) {

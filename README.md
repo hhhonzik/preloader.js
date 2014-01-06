@@ -3,7 +3,7 @@
 
 ---
 **[Download latest](https://raw.github.com/hhhonzik/Preloader.js/master/preloader.js) |**
-**[Code](#code) |**
+**[Code](#code)
 
 ---
 ### Current version: v1.0.9 (2014-01-06)
@@ -13,7 +13,6 @@ This simple jQuery plugin will help you with creating preloaders on your website
 
 
 ## <a name="code"></a> Code
-
 
     // you can call it on just part of the website
     $('body').preload({
