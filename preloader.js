@@ -36,15 +36,18 @@
 
         var el;
 
-        var onComplete;
-        var onProgress;
+        var onComplete = function(){};
+        var onProgress = function(){};
 
         var preloadDone = 0;
         var preloadTotal = 0;
 
         function LoaderView(o){
             el = o.el;
-            onComplete = o.onComplete
+            
+            onComplete = o.onComplete || onComplete;
+            onProgress = o.onProgress || onProgress;
+            
             preloadContainer = $("<div></div>").appendTo(el).css({
                     display: "none",
                     width: 0,
@@ -125,7 +128,6 @@
                 return this.each(initialize);
                 function initialize() {
                     var $el = $(this);
-                    
                     $el.data(viewKey, new LoaderView({
                         el: $el,
                         onComplete: options.complete,
@@ -134,7 +136,7 @@
                 }
             }
         };
-        $.fn.preload = function(method) {
+        $.fn.preloader = function(method) {
             if (methods[method]) {
                 return methods[method].apply(this, [].slice.call(arguments, 1));
             } else {
