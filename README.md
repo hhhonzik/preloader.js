@@ -6,7 +6,7 @@
 **[Code](#code)
 
 ---
-### Current version: v1.0.9 (2014-01-06)
+### Current version: v1.0 (2014-01-06)
 ## Introduction
 
 This simple jQuery plugin will help you with creating preloaders on your website. This plugin does not have any visual interface, you need to create it by yourself. This is just a simple Javascript 
