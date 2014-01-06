@@ -2,8 +2,8 @@
 # Preloader.js
 
 ---
-**[Download latest](https://raw.github.com/hhhonzik/Preloader.js/master/preloader.js) |**
-**[Code](#code)
+**[Download latest](https://raw.github.com/hhhonzik/Preloader.js/master/preloader.js) ** | **
+[Code](#code)
 
 ---
 ### Current version: v1.0 (2014-01-06)
