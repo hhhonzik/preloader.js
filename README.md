@@ -2,8 +2,8 @@
 # Preloader.js
 
 ---
-**[Download latest](https://raw.github.com/hhhonzik/Preloader.js/master/preloader.js) ** | **
-[Code](#code)
+**[Download latest](https://raw.github.com/hhhonzik/Preloader.js/master/preloader.js)** | 
+**[Code](#code)
 
 ---
 ### Current version: v1.0 (2014-01-06)
@@ -34,8 +34,6 @@ Usage is explained in example code in this project.
 ## Example 2 - simple preloader
 
 If you want to have really simple preloader, all you need to do is style  and you can use this simple function. Note that preloader should be already  created in DOM when page loads, because now visitors must download JavaScript file first. 
-
-# JS
 
 	$(document).ready(function(){
 		$('body').append('<div id="#preloader"></div>');
