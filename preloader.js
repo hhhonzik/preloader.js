@@ -37,6 +37,7 @@
         var el;
 
         var onComplete = function(){};
+        var onStart = function(){};
         var onProgress = function(){};
 
         var preloadDone = 0;
@@ -45,6 +46,7 @@
         function LoaderView(o){
             el = o.el;
             
+            onStart = o.onStart || onStart;
             onComplete = o.onComplete || onComplete;
             onProgress = o.onProgress || onProgress;
             
@@ -64,6 +66,10 @@
 
             //append images
             preloadTotal = preloadImages.length
+
+            //we know how much images we will have
+            onStart(preloadTotal);
+            
             for (i in preloadImages){
                 addImageForPreload( preloadImages[i] )
             }
@@ -75,12 +81,11 @@
 
         function completeImageLoading(){
             preloadDone++;
-
-            if(preloadDone == preloadTotal){
+            if(preloadDone == preloadTotal)
                 onComplete()
-            }else{
-                onProgress(preloadDone, preloadTotal);
-            }
+            
+            onProgress(preloadDone, preloadTotal);
+            
         }
         function addImageForPreload(url) {
             var image = $("<img />").attr("src", url).bind("load error", function () {
@@ -130,6 +135,7 @@
                     var $el = $(this);
                     $el.data(viewKey, new LoaderView({
                         el: $el,
+                        onStart: options.start,
                         onComplete: options.complete,
                         onProgress: options.progress
                     }));

@@ -18,6 +18,9 @@ Usage is explained in example code in this project.
 
     // you can call it on just part of the website
     $('body').preload({
+    	start: function(total){
+    		alert("We have started loading website");
+    	},
         progress: function(done, total){ // process function is called whenever an image is loaded.
             alert("You have " + (done / total)*100  + "% ");
         },
